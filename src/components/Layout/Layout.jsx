@@ -1,32 +1,43 @@
-// src/components/Layout/layout.jsx
+// src/components/Layout/Layout.jsx
 'use client';
-import Footer from './Footer';
-import Header from './Header';
-import SEO from './SEO';
+
+import { useEffect } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 /**
  * @component Layout
- * @description The main structural wrapper component for all pages.
- * It manages the SEO metadata, Header, Footer, and the main content area.
- * @param {string} title - The title for the page SEO.
- * @param {string} description - The description for the page SEO.
- * @param {string} keywords - Keywords for the page SEO.
- * @param {ReactNode} children - The main content of the page.
+ * @description Master framework template wrapper handling dynamic document titles for clean, uniform SEO.
  */
-const Layout = ({ title, description, keywords, children }) => {
+export default function Layout({ title, description, children }) {
+  
+  useEffect(() => {
+    const baseBranding = "Sivasakthi Science Foundation™";
+    
+    // If it's the home page, keep the clean brand string. Otherwise, build the breadcrumb title.
+    if (!title || title.toLowerCase() === "home") {
+      document.title = baseBranding;
+    } else {
+      document.title = `${title} | ${baseBranding}`;
+    }
+    
+    // Dynamically update meta description tag for search crawlers
+    if (description) {
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.name = 'description';
+        document.head.appendChild(metaDesc);
+      }
+      metaDesc.content = description;
+    }
+  }, [title, description]);
+
   return (
     <>
-      <SEO title={title} description={description} keywords={keywords} />
-      
       <Header />
-
-      <main>
-        {children}
-      </main>
-
+      {children}
       <Footer />
     </>
   );
-};
-
-export default Layout;
+}
