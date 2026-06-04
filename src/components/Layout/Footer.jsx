@@ -48,7 +48,7 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-        
+
         {/* Column 1: Core Branding Block */}
         <div className="footer-brand">
           <strong className="footer-brand-title">Sivasakthi Science Foundation™</strong>
@@ -61,18 +61,10 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Column 2: Organization Hyperlinks */}
-        <div className="footer-links">
-          <h4>Organization</h4>
-          <Link href="/about">About Us</Link>
-          <Link href="/mission">Mission Statement</Link>
-          <Link href="/transparency">Transparency</Link>
-        </div>
-
         {/* Column 3: Engagement & Utilities */}
         <div className="footer-links">
           <h4>Engage</h4>
-          <Link href="/get-involved">Get Involved</Link>
+          <Link href="/faq">Frequently Asked Questions</Link>
           <Link href="/contact">Contact Us</Link>
           <Link href="/privacy">Privacy & Terms</Link>
         </div>

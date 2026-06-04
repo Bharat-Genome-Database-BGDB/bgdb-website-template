@@ -7,21 +7,21 @@ import Footer from "./Footer";
 
 /**
  * @component Layout
- * @description Master framework template wrapper handling dynamic document titles for clean, uniform SEO.
+ * @description Master framework template wrapper handling dynamic document titles, meta descriptions, and cache-busting favicon linking.
  */
 export default function Layout({ title, description, children }) {
   
   useEffect(() => {
     const baseBranding = "Sivasakthi Science Foundation™";
     
-    // If it's the home page, keep the clean brand string. Otherwise, build the breadcrumb title.
+    // 1. Handle Dynamic Breadcrumb Document Titles
     if (!title || title.toLowerCase() === "home") {
       document.title = baseBranding;
     } else {
       document.title = `${title} | ${baseBranding}`;
     }
     
-    // Dynamically update meta description tag for search crawlers
+    // 2. Dynamically Update Meta Description Tag for SEO Crawlers
     if (description) {
       let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
@@ -31,6 +31,15 @@ export default function Layout({ title, description, children }) {
       }
       metaDesc.content = description;
     }
+
+    // 3. Force-Inject Favicon to Override Aggressive Browser Caches
+    let faviconLink = document.querySelector('link[rel="icon"]') || document.querySelector('link[rel="shortcut icon"]');
+    if (!faviconLink) {
+      faviconLink = document.createElement('link');
+      faviconLink.rel = 'icon';
+      document.head.appendChild(faviconLink);
+    }
+    faviconLink.href = `/favicon.ico?v=${Date.now()}`; 
   }, [title, description]);
 
   return (

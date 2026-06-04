@@ -1,70 +1,61 @@
 // src/app/page.jsx
+'use client';
+
 import Layout from "@layout/Layout";
-import "./globals.scss";
+import "@styles/home.css";
 
-const quickLinks = [
-  {
-    text: "Internship FAQ",
-    href: "/get-involved#faq"
-  },
-  {
-    text: "Research Papers",
-    href: "/projects#publications"
-  },
-  {
-    text: "Community Support",
-    href: "/contact"
-  }
-];
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <Layout
-      title="Home"
-      description="Sivasakthi Science Foundation™ — Advancing Research, Training, and Education in Kerala, India."
-    >
-      <main className="main-content-wrapper">
-        <div className="home-hero-text-block">
-          
-          {/* Header Identity Deck */}
-          <header className="hero-identity-group">
-            <h1 className="hero-main-title">Sivasakthi Science Foundation™</h1>
-            <p className="hero-sub-tagline">Advancing Research, Training & Education</p>
-          </header>
+    <Layout title="Home" description="Advancing field research, public training, and computational genomics platforms.">
+      <main className="home-container">
+        
+        {/* 1. Hero Title Header Banner */}
+        <section className="home-hero">
+          <h1>Advancing Scientific Research, Specialized Training & Education</h1>
+          <p>
+            Bridging high-throughput genomics with modern computational deep learning systems to serve community welfare and drive open-access scientific discovery.
+          </p>
+        </section>
 
-          {/* Core Descriptive Text Body */}
-          <section className="mission-description-section">
-            <h2 className="mission-section-heading">What is Sivasakthi Science Foundation?</h2>
+        {/* 2. Unified Mission Statement Focus Block */}
+        <section className="home-mission-summary">
+          <h2>Our Core Scientific Manifesto</h2>
+          <p>
+            Sivasakthi Science Foundation™ is structured around a clear directive: moving beyond raw data processing to establish meaningful, verifiable computational breakthroughs. By supplying infrastructure, computational analytics pipelines, and milestone grants, we build environment models engineered for the long-term advancement of science and biological insight.
+          </p>
+        </section>
+
+        {/* 3. The Core Platforms & Verticals Workspace Grid */}
+        <section className="verticals-wrapper">
+          <div className="verticals-grid">
             
-            <p className="mission-paragraph">
-              The world of science moves fast, but implementation requires responsibility. 
-              SSF combines the power of <strong>Genomics</strong> with the precision of <strong>AI</strong>.
-            </p>
-            
-            <p className="mission-paragraph">
-              We don't just collect data; we explore the identity of the genome to ensure every 
-              research breakthrough delivers actual community value.
-            </p>
-
-            <blockquote className="mission-pullquote">
-              "Moving beyond simple data collection. Starting to drive strategic healthcare quality."
-            </blockquote>
-          </section>
-
-          {/* Quick Links Horizontal Ribbon Grid */}
-          <div className="quick-links-ribbon">
-            <span className="ribbon-label">Quick Links:</span>
-            <div className="ribbon-links-group">
-              {quickLinks.map((link, idx) => (
-                <a key={link.text} href={link.href} className="ribbon-hyperlink">
-                  {link.text}
-                  {idx < quickLinks.length - 1 && <span className="link-separator"></span>}
-                </a>
-              ))}
+            <div className="vertical-card">
+              <div className="icon-box">
+                <i className="fas fa-dna"></i>
+              </div>
+              <h3>Genomics & BioInfo</h3>
+              <p>Deploying open-source sequence processing maps and data hubs to archive and analyze biological datasets across regional profiles.</p>
             </div>
-          </div>
 
-        </div>
+            <div className="vertical-card">
+              <div className="icon-box">
+                <i className="fas fa-brain"></i>
+              </div>
+              <h3>Artificial Intelligence</h3>
+              <p>Leveraging neural pattern mapping and computational deep learning to speed up predictive sequence modeling and translational informatics.</p>
+            </div>
+
+            <div className="vertical-card">
+              <div className="icon-box">
+                <i className="fas fa-seedling"></i>
+              </div>
+              <h3>Incubator Systems</h3>
+              <p>Providing independent research funding, high-performance cloud compute assets, and direct academic pipelines for emerging scientific talents.</p>
+            </div>
+
+          </div>
+        </section>
+
       </main>
     </Layout>
   );

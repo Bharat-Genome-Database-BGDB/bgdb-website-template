@@ -42,19 +42,10 @@ const Header = () => {
       ]
     },
     { 
-      label: "Get Involved", 
-      to: "#",
-      dropdown: [
-        { label: "Funding Requests", to: "/funding" },
-        { label: "Collaborations", to: "/collaborations" }
-      ]
-    },
-    { 
       label: "Projects", 
       to: "#",
       dropdown: [
         { label: "Projects & Initiatives", to: "/projects/initiatives" },
-        { label: "AI Research", to: "/projects/ai-research" }
       ]
     },
     { label: "Contact Us", to: "/contact" },
