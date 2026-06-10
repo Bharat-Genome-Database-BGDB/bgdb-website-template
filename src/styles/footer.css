@@ -1,12 +1,15 @@
 /* src/styles/footer.css */
 
 .site-footer {
-  background-color: #1a0530; /* The True Dark Plum Variable */
-  color: rgba(196, 181, 253, 0.7); /* Muted Lilac Text Fallback */
+  background-color: #0f172a;
+  /* Deep Slate anchoring bar matching the Header top bar */
+  color: #94a3b8;
+  /* Crisp, clean muted gray for sub-elements and copy */
   padding: 60px 24px 40px;
   font-family: 'Inter', sans-serif;
   width: 100%;
-  border-top: 1px solid rgba(167, 139, 250, 0.1);
+  border-top: 1px solid #e2e8f0;
+  /* Clear boundary definition divider */
 }
 
 .footer-inner {
@@ -34,7 +37,8 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 700;
-  color: #ffffff; /* Bright White Accent */
+  color: #ffffff;
+  /* Bright White Accent for strong corporate branding */
   margin: 0;
 }
 
@@ -42,12 +46,14 @@
   font-style: normal;
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(196, 181, 253, 0.65);
+  color: #cbd5e1;
+  /* Clear white-toned slate for excellent text contrast */
 }
 
 .footer-copyright {
   font-size: 12px;
-  color: rgba(196, 181, 253, 0.5);
+  color: #64748b;
+  /* Soft footer sub-text gray */
   margin-top: 8px;
 }
 
@@ -62,14 +68,16 @@
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #a78bfa; /* Vibrant Lilac Header */
+  color: #38bdf8;
+  /* Sharp, vibrant light tech blue for group subtitles */
   margin: 0 0 4px 0;
   letter-spacing: 0.12em;
 }
 
 .footer-links a {
   display: block;
-  color: rgba(196, 181, 253, 0.65);
+  color: #94a3b8;
+  /* Matching calm slate layout standard links */
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
@@ -77,20 +85,55 @@
 }
 
 .footer-links a:hover {
-  color: #ffffff;
-  transform: translateX(2px); /* Subtle glide link transition */
+  color: #38bdf8;
+  /* Clean blue glow transitions on cursor hover */
+  transform: translateX(2px);
+  /* Subtle glide link transition */
 }
 
 /* Responsive breakdowns for mobile views */
 @media (max-width: 768px) {
+
   .footer-inner,
   .footer-inner:has(.member-gate-links) {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+
   .footer-brand {
-    border-bottom: 1px solid rgba(167, 139, 250, 0.1);
+    border-bottom: 1px solid #334155;
+    /* Subtle dark slate line separating rows on mobile */
     padding-bottom: 24px;
   }
+}
+
+/* --- Section 2: Base Attribution Layer Styles --- */
+.footer-base-bar {
+  border-top: 1px solid #1e293b; /* Sleek slate line dividing Section 1 and Section 2 */
+  margin-top: 48px;
+  padding-top: 24px;
+  width: 100%;
+}
+
+.footer-base-container {
+  background-color: #0f172a;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-copyright-statement {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-copyright-statement a {
+  color: #38bdf8; 
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-copyright-statement a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }

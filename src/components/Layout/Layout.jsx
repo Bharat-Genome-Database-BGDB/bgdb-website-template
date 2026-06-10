@@ -2,17 +2,16 @@
 'use client';
 
 import { useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 
 /**
  * @component Layout
- * @description Master framework template wrapper handling dynamic document titles, meta descriptions, and cache-busting favicon linking.
+ * @description Master framework template wrapper handling dynamic document titles, 
+ * meta descriptions, and cache-busting favicon linking. Purely logical now to prevent duplication.
  */
 export default function Layout({ title, description, children }) {
   
   useEffect(() => {
-    const baseBranding = "Sivasakthi Science Foundation™";
+    const baseBranding = "Gen AI Research Labs";
     
     // 1. Handle Dynamic Breadcrumb Document Titles
     if (!title || title.toLowerCase() === "home") {
@@ -42,11 +41,10 @@ export default function Layout({ title, description, children }) {
     faviconLink.href = `/favicon.ico?v=${Date.now()}`; 
   }, [title, description]);
 
+  // Return ONLY children. RootLayout handles the visual header/footer wrapping globally.
   return (
     <>
-      <Header />
       {children}
-      <Footer />
     </>
   );
 }

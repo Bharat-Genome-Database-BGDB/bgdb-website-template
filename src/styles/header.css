@@ -9,15 +9,14 @@
   z-index: 1000;
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Lighter, clean boundary shadow */
 }
 
-/* --- 2. Top Ecosystem Bar (The Plum Top Bar) --- */
+/* --- 2. Top Ecosystem Bar (Clean Scientific Top Bar) --- */
 .top-bar {
-  background-color: #2e1065;
-  /* Dark Plum Identity */
+  background-color: #0f172a; /* Deep Slate replacing heavy Plum */
   padding: 8px 24px;
-  color: #f3e8ff;
+  color: #e2e8f0;
   font-size: 13px;
   font-weight: 500;
 }
@@ -39,22 +38,26 @@
 .nav-wrapper-item {
   display: flex;
   align-items: center;
+  color: #e2e8f0;
+  transition: color 0.2s ease;
+  font-size: 12px;
+  font-weight: 600; /* Fixed bold layout assignment */
 }
 
 .nav-item-link {
-  color: #f3e8ff;
+  color: #e2e8f0;
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 }
 
 .nav-item-link:hover {
-  opacity: 0.8;
+  color: #38bdf8; /* Sharp, light tech blue accent hover */
 }
 
 .separator {
-  color: #a78bfa;
+  color: #334155; /* Soft slate separator */
   margin: 0 10px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .top-bar-socials {
@@ -64,26 +67,17 @@
 }
 
 .social-link {
-  color: #f3e8ff;
+  color: #e2e8f0;
   transition: color 0.2s ease;
   font-size: 14px;
 }
 
-.nav-wrapper-item {
-  color: #f3e8ff;
-  transition: color 0.2s ease;
-  font-size: 12px;
-  font-style: bold;
-}
-
 .social-link:hover {
-  color: #ffffff;
-  font-size: 20px;
+  color: #38bdf8; /* Keeps elements perfectly static without breaking structural layout */
 }
 
 .nav-wrapper-item:hover {
-  color: #ffffff;
-  font-size: 16px;
+  color: #38bdf8;
 }
 
 /* --- 3. Main Navigation Shell --- */
@@ -117,19 +111,19 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 700;
-  color: #1e0535;
+  color: #0f172a; /* Matched to deep slate body text color */
   margin: 0;
 }
 
 .brand-tagline {
   font-size: 11px;
-  color: #6b7280;
+  color: #64748b; /* Soft slate */
   margin: 0;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
-/* Navigation */
+/* Navigation Links */
 .nav-list {
   display: flex;
   align-items: center;
@@ -143,19 +137,20 @@
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  color: #1e0535;
+  color: #334155; /* Neutral dark for text legs */
   padding: 8px 4px;
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: color 0.2s ease;
 }
 
 .nav-link-item:hover,
 .nav-link-item.active {
-  color: #7c3aed;
+  color: #0284c7; /* Scientific blue accent to match body titles */
 }
 
-/* Dropdown */
+/* Dropdown Menu */
 .nav-item {
   position: relative;
 }
@@ -164,9 +159,10 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: #fff;
+  background: #ffffff;
   min-width: 220px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08); /* Clean dark-slate shadow fill */
+  border: 1px solid #e2e8f0;
   border-radius: 6px;
   padding: 8px 0;
   list-style: none;
@@ -182,28 +178,31 @@
   display: block;
   padding: 10px 20px;
   font-size: 14px;
-  color: #4b5563;
+  color: #475569;
   text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-link-item:hover {
-  background: #f3e8ff;
-  color: #7c3aed;
+  background: #f0f9ff; /* Clear, refreshing blue background highlight */
+  color: #0284c7;
 }
 
-/* CTA Button */
+/* CTA Sign In Button */
 .nav-signin-btn {
-  background: linear-gradient(135deg, #4a1d96 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%); /* Clean blue science spectrum */
   color: #ffffff;
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .nav-signin-btn:hover {
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  transform: translateY(-1px);
 }
 
 /* Mobile Toggle */
@@ -217,7 +216,7 @@
 .hamburger-bar {
   width: 24px;
   height: 2px;
-  background: #1e0535;
+  background: #0f172a;
   margin: 4px 0;
 }
 
@@ -233,8 +232,9 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
+    background: #ffffff;
     padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
   }
 
   .nav-menu.open {

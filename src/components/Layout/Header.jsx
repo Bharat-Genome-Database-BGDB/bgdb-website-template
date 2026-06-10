@@ -8,8 +8,8 @@ import "@styles/header.css";
 
 /**
  * @component Header
- * @description The Master Double-Header Navigation. 
- * Reverted to stable structure with original Plum identity and icon support.
+ * @description Master Double-Header Navigation fully updated for Gen AI Research Labs.
+ * Preserves standard global ecosystem top bar connections and layout structure.
  */
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,26 +18,28 @@ const Header = () => {
   const pathname = usePathname();
   const menuRef = useRef();
 
-  // --- Master Navigation Configuration ---
+  // --- GenAI Lab Navigation Configuration ---
   const navLinks = [
     { label: "Home", to: "/" },
     { 
-      label: "About Us", 
+      label: "About Labs", 
       to: "#",
       dropdown: [
-        { label: "Our Story", to: "/about/ourstory" },
-        { label: "Board of Trustees", to: "/about/trustees" },
-        { label: "Financial Transparency", to: "/about/transparency" }
+        { label: "Our Story", to: "/about/ourstory" }
       ]
     },
     {
-      label: "Projects",
+      label: "Research",
       to: "#",
-      dropdown: [{ label: "Projects & Initiatives", to: "/projects/initiatives" }]
+      dropdown: [
+        { label: "Models & Initiatives", to: "/projects/initiatives" },
+        { label: "Publications", to: "/projects/publications" }
+      ]
     },
     { label: "Contact Us", to: "/contact" },
   ];
 
+  // Standard global ecosystem mapping preserved intact
   const SSF_ECOSYSTEM = [
     { name: "SSF", url: "https://www.sivasakthifoundation.org" },
     { name: "GenAI", url: "https://genairesearch.org" },
@@ -52,7 +54,7 @@ const Header = () => {
 
   return (
     <header className="site-header" ref={menuRef}>
-      {/* 1. Top Bar: Restored Plum Identity */}
+      {/* 1. Top Bar: Preserved Global Standard Ecosystem Layout */}
       <div className="top-bar">
         <div className="top-bar-container">
           <div className="top-bar-left">
@@ -81,14 +83,15 @@ const Header = () => {
         </div>
       </div>
 
-      {/* 2. Main Navigation Shell */}
+      {/* 2. Main Navigation Shell - Branded for Gen AI Research Labs */}
       <div className="main-nav-container">
         <div className="nav-wrapper">
           <Link href="/" className="header__brand">
-            <img src="/images/global/Logo.png" alt="Sivasakthi Logo" className="brand-logo" />
+            {/* Logo image target location for your swapped asset file */}
+            <img src="/images/global/Logo.png" alt="Gen AI Research Labs Logo" className="brand-logo" />
             <div className="brand-text">
-              <h1 className="brand-title">Sivasakthi Science Foundation™</h1>
-              <p className="brand-tagline">Advancing Research, Training & Education</p>
+              <h1 className="brand-title">Gen AI Research Labs™</h1>
+              <p className="brand-tagline">Computational Genomics & Molecular AI</p>
             </div>
           </Link>
 

@@ -3,117 +3,124 @@
 .home-container {
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 100px;
   font-family: var(--font-sans);
+  background: #f8fafc; /* Crisp, clean, academic light off-white background */
+  color: #0f172a;      /* High-contrast deep slate for body text readability */
 }
 
-/* Master Hero Section */
-.home-hero {
-  background: linear-gradient(180deg, #faf9fe 0%, #ffffff 100%);
-  padding: 100px 24px 80px;
-  text-align: center;
-  border-bottom: 1px solid var(--bg-border);
+/* Master Core Grid Wrapper - Locks content to Header/Footer limits */
+.content-wrapper {
+  max-width: 1200px;  
+  margin: 0 auto;     
+  padding: 0 24px;   
 }
 
-.home-hero h1 {
-  font-family: var(--font-serif);
-  font-size: 48px;
+/* 1. Hero Alignment Layout */
+.hero-section {
+  padding: 6rem 0;
+  border-bottom: 1px solid #e2e8f0; /* Light divider line */
+  position: relative;
+}
+
+.hero-title {
+  font-size: 3.5rem;
   font-weight: 800;
-  color: var(--ink-primary);
+  margin-bottom: 1.5rem;
   line-height: 1.15;
-  max-width: 900px;
-  margin: 0 auto 20px;
+  color: #0f172a; /* Explicit dark color for header text */
 }
 
-.home-hero p {
-  font-size: 18px;
-  color: #4a5568;
+.hero-title span {
+  color: #0284c7; /* Refined, high-contrast scientific blue accent */
+}
+
+.label-tag {
+  font-size: 0.75rem;
+  color: #0369a1; /* Darker blue for legibility on light background */
+  background: #e0f2fe; /* Light background bubble for the tag */
+  border: 1px solid #bae6fd;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+  font-size: 1.25rem;
+  color: #475569; /* Soft dark gray for paragraphs, keeping readability high */
   max-width: 650px;
-  margin: 0 auto;
   line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-/* Core Impact Callout Section */
-.home-mission-summary {
-  max-width: 850px;
-  margin: 80px auto;
-  padding: 0 24px;
-  text-align: center;
-}
-
-.home-mission-summary h2 {
-  font-family: var(--font-serif);
-  font-size: 32px;
-  color: var(--ink-primary);
-  margin-bottom: 20px;
-}
-
-.home-mission-summary p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #2d3748;
-}
-
-/* Scientific Hub Feature Grid */
-.verticals-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.verticals-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 40px;
-}
-
-.vertical-card {
-  background: #ffffff;
-  border: 1px solid var(--bg-border);
-  padding: 32px 24px;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(26, 5, 48, 0.01);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.vertical-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--brand-violet);
-}
-
-.icon-box {
-  width: 48px;
-  height: 48px;
-  background: #f5f3ff;
-  color: var(--brand-violet);
-  border-radius: 12px;
+.hero-actions {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  margin-bottom: 20px;
+  gap: 1rem;
 }
 
-.vertical-card h3 {
-  font-family: var(--font-serif);
-  font-size: 22px;
-  color: var(--ink-primary);
-  margin-bottom: 12px;
+/* 2. Research Pillars Display Grid */
+.pillars-section {
+  padding: 6rem 0;
 }
 
-.vertical-card p {
-  font-size: 14px;
+.section-subtitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #0284c7; /* Professional scientific accent */
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #0f172a;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pillar-card {
+  background: #ffffff; /* Solid white card to stand out cleanly against the light gray background */
+  border: 1px solid #e2e8f0; /* Smooth, light border */
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle depth for light mode layout */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pillar-card:hover {
+  border-color: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08); /* Sophisticated light-mode hover glow */
+}
+
+.icon-svg {
+  width: 28px;
+  height: 28px;
+  color: #0284c7;
+}
+
+.pillar-title {
+  font-size: 1.35rem;
+  margin: 1.25rem 0 0.75rem;
+  color: #0f172a;
+}
+
+.pillar-desc {
+  color: #475569; /* Clean gray for subtext */
   line-height: 1.6;
-  color: #4b5563;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
-  .verticals-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .hero-title {
+    font-size: 2.5rem;
   }
-  .home-hero h1 {
-    font-size: 36px;
+  .hero-actions {
+    flex-direction: column;
   }
 }

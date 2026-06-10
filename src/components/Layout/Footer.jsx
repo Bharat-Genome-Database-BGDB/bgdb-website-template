@@ -1,4 +1,3 @@
-// src/components/Layout/Footer.jsx
 'use client';
 
 import { useState, useEffect } from "react";
@@ -8,7 +7,8 @@ import "@styles/footer.css";
 
 /**
  * @component Footer
- * @description Master multi-column template footer styling utilizing deep plum layouts matching original FAQ specifications.
+ * @description Master split two-section template footer updated for Gen AI Research Labs.
+ * Separates core navigation categories from lower-level sub-brand attribution layers.
  */
 const Footer = () => {
   const [userRole, setUserRole] = useState("public");
@@ -43,33 +43,38 @@ const Footer = () => {
     fetchRole();
   }, []);
 
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="site-footer">
+      
+      {/* SECTION 1: Top Navigation & Link Directory */}
       <div className="footer-inner">
-
-        {/* Column 1: Core Branding Block */}
+        
+        {/* Column 1: Core Identity Desk */}
         <div className="footer-brand">
-          <strong className="footer-brand-title">Sivasakthi Science Foundation™</strong>
+          <strong className="footer-brand-title">Gen AI Research Labs™</strong>
           <address className="footer-address">
-            Kowdiar, Thiruvananthapuram,<br />
-            Kerala, India
+            Computational Genomics & Molecular AI<br />
+            An Interdisciplinary Core Laboratory
           </address>
-          <p className="footer-copyright">
-            &copy; {currentYear}. Advancing Research, Training & Education.
-          </p>
         </div>
 
-        {/* Column 3: Engagement & Utilities */}
+        {/* Column 2: Lab Pages Directory */}
         <div className="footer-links">
-          <h4>Engage</h4>
-          <Link href="/faq">Frequently Asked Questions</Link>
-          <Link href="/contact">Contact Us</Link>
-          <Link href="/privacy">Privacy & Terms</Link>
+          <h4>About Labs</h4>
+          <Link href="/about/ourstory">Our Story</Link>
+          <Link href="/about/trustees">Our Team & Fellows</Link>
+          <Link href="/about/transparency">Research Areas</Link>
         </div>
 
-        {/* Dynamic Column 4: Template Access Layer for RBAC states */}
+        {/* Column 3: Science Matrix & Operations */}
+        <div className="footer-links">
+          <h4>Research Core</h4>
+          <Link href="/projects/initiatives">Models & Initiatives</Link>
+          <Link href="/projects/publications">Publications</Link>
+          <Link href="/contact">Contact Us</Link>
+        </div>
+
+        {/* Column 4: Dynamic Portal Gate (RBAC) */}
         {!loading && ["admin", "superadmin", "member"].includes(userRole) && (
           <div className="footer-links member-gate-links">
             <h4>Member Area</h4>
@@ -77,8 +82,17 @@ const Footer = () => {
             <Link href="/internships">Internship Portal</Link>
           </div>
         )}
-
       </div>
+
+      {/* SECTION 2: Dedicated Base Layer Metadata Attribution Bar */}
+      <div className="footer-base-bar">
+        <div className="footer-base-container">
+          <p className="footer-copyright-statement">
+            &copy; 2026 Gen AI Research Labs, All right reserved. An SSF Initiative. Managed by <a href="https://bgdb.org" target="_blank" rel="noopener noreferrer">BGDB.org</a>
+          </p>
+        </div>
+      </div>
+
     </footer>
   );
 };
