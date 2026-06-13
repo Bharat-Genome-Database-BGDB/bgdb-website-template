@@ -21,7 +21,7 @@ const Header = () => {
   // --- GenAI Lab Navigation Configuration ---
   const navLinks = [
     { label: "Home", to: "/" },
-    { label: "About Labs", to: "/#about" },       
+    { label: "About Labs", to: "/about" },       
     { label: "Our Research", to: "/#research" }, 
     { label: "FAQ", to: "/faq" },                
     { label: "Contact Us", to: "/contact" }, 
@@ -113,7 +113,6 @@ const Header = () => {
                   )}
                 </li>
               ))}
-              <li className="nav-item"><Link href="/signin" className="nav-signin-btn">Sign In</Link></li>
             </ul>
           </nav>
         </div>

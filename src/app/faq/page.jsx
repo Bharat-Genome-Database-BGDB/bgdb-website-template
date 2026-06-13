@@ -6,38 +6,41 @@ import "@styles/faq.css";
 export default function FaqPage() {
   const faqData = [
     {
-      q: "What is Sivasakthi Science Foundation?",
-      a: "Sivasakthi Science Foundation is a public charitable trust dedicated to advancing education, research, and scientific innovation. The foundation works across disciplines to encourage knowledge creation, support meaningful learning, and connect academic ideas with practical, real-world impact."
+      q: "What is GenAI Research Labs?",
+      a: "GenAI Research Labs is an interdisciplinary computational research arm operating under the Sivasakthi Science Foundation umbrella. We focus explicitly on the intersection of deep learning and multi-omics, developing state-of-the-art machine learning models to decode complex biological sequences, accelerate structural biology pipelines, and optimize drug discovery."
     },
     {
-      q: "How does the foundation operate?",
-      a: "The foundation operates through research initiatives, educational programs, collaborative projects, and public outreach activities. By bringing together students, educators, researchers, and professionals, we create opportunities for learning, discovery, and applied scientific engagement that benefit both individuals and communities."
+      q: "How does GenAI Research Labs utilize machine learning in genomics?",
+      a: "We train and fine-tune specialized transformer architectures and deep convolutional networks on massive, curated multi-omics datasets. These neural networks are designed to capture complex spatial and evolutionary relationships within biological data, enabling tasks like variant pathogenicity prediction, structural protein modeling, and structural variations classification."
     },
     {
-      q: "What are the foundation’s major focus areas?",
-      a: "Our focus areas include scientific research, student development, innovation-driven learning, and interdisciplinary work in emerging fields such as genomics, artificial intelligence, and deep learning. We also support initiatives that strengthen science education and expand access to knowledge, training, and research opportunities."
+      q: "What is the relationship between GenAI Research Labs and the Bharat Genome Database (BGDB)?",
+      a: "GenAI Research Labs serves as the core engineering and analytical backbone for the Bharat Genome Database. While BGDB functions as a highly secure, role-based genomic storage network and sequence visualization browser, our lab builds the deep learning pipelines that ingest, clean, and run downstream predictive modeling over those population-scale variant sets."
     },
     {
-      q: "How does Sivasakthi Science Foundation support students?",
-      a: "The foundation supports students by encouraging scientific curiosity, strengthening academic and practical skills, and promoting research-oriented thinking. Through mentorship, learning resources, workshops, and project-based opportunities, we help students build confidence and prepare for future pathways in science, technology, and innovation."
+      q: "Are the models and datasets developed here open-source?",
+      a: "We are committed to open-source reproducibility. Our model weights, structural pipeline configurations, and utility training benchmarks are routinely deployed to GitHub for academic verification. However, institutional clinical trial pipelines and raw patient genomic data remains strictly protected using multi-tenant security layers."
     },
     {
-      q: "How can I get involved with the foundation?",
-      a: "There are several ways to get involved, including volunteering, participating in outreach efforts, collaborating on projects, supporting institutional initiatives, or engaging with our educational programs. We welcome individuals and organizations who share our commitment to science, learning, and long-term social impact."
+      q: "How can academic institutes or clinical groups collaborate with the lab?",
+      a: "Research institutions can submit joint biological processing requests or deep learning project proposals through our computational intake channels. Collaborators often leverage our high-performance infrastructure to run specialized model evaluations, scale mutation processing pipelines, or collaborate on structural biology papers."
     },
     {
-      q: "What kinds of volunteer opportunities does the foundation offer?",
-      a: "Volunteer opportunities may include assisting with science awareness campaigns, educational workshops, student engagement programs, community outreach activities, and project support. Volunteers play an important role in helping the foundation extend its reach and deliver meaningful scientific and educational value to a wider audience."
+      q: "What training pathways are available for researchers and interns?",
+      a: "We host intensive computational genomics bootcamps, master's thesis mentorship programs, and postdoctoral fellowships. Selected participants interface directly with our model pipelines, learning to manage high-throughput deep learning training loops, handle massive sequence alignment indices, and engineer performant bioinformatics data loaders."
     }
   ];
 
   return (
-    <Layout title="FAQ" description="Frequently Asked Questions — Sivasakthi Science Foundation™">
+    <Layout 
+      title="FAQ | GenAI Research Labs" 
+      description="Frequently Asked Questions — Explore the deep learning architectures, computational multi-omics research, and open-source models built at GenAI Research Labs."
+    >
       <main className="faq-page-wrapper">
         
         <header className="hero-identity-group">
           <h1 className="hero-main-title">Frequently Asked Questions</h1>
-          <p className="hero-sub-tagline">Learn more about our mission, focus areas, and collaboration models.</p>
+          <p className="hero-sub-tagline">Technical, operational, and architectural answers regarding our computational pipelines.</p>
         </header>
 
         <section className="faq-container">

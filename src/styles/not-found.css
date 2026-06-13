@@ -1,0 +1,52 @@
+/* src/styles/not-found.css */
+
+.notfound-main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 120px 24px;
+  text-align: center;
+  font-family: var(--font-sans);
+}
+
+.notfound-code {
+  font-family: var(--font-sans); /* Swapped to clean tech sans-serif for sharp numeric weighting */
+  font-size: 84px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--lab-blue); /* Clear, authoritative scientific blue */
+  margin-bottom: 8px;
+}
+
+.notfound-title {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 16px;
+}
+
+.notfound-text {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+.notfound-btn {
+  background: var(--lab-blue); /* High-contrast lab blue active state */
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.notfound-btn:hover {
+  background: var(--lab-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(3, 105, 161, 0.25);
+}

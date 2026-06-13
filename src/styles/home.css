@@ -31,12 +31,12 @@
 }
 
 .hero-title span {
-  color: #0284c7; /* Refined, high-contrast scientific blue accent */
+  color: var(--lab-blue); /* High-contrast scientific blue accent */
 }
 
 .label-tag {
   font-size: 0.75rem;
-  color: #0369a1; /* Darker blue for legibility on light background */
+  color: var(--lab-blue-hover); /* Darker blue for legibility on light background */
   background: #e0f2fe; /* Light background bubble for the tag */
   border: 1px solid #bae6fd;
   padding: 0.25rem 0.75rem;
@@ -47,15 +47,30 @@
 
 .hero-desc {
   font-size: 1.25rem;
-  color: #475569; /* Soft dark gray for paragraphs, keeping readability high */
+  color: var(--text-muted); /* Soft dark gray for paragraphs, keeping readability high */
   max-width: 650px;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 1rem;
+/* Unified Action Buttons matching design system standards */
+.action-btn-primary {
+  display: inline-block;
+  background: var(--lab-blue);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.action-btn-primary:hover {
+  background: var(--lab-blue-hover);
+  transform: translateY(-1px);
 }
 
 /* 2. Research Pillars Display Grid */
@@ -67,7 +82,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #0284c7; /* Professional scientific accent */
+  color: var(--lab-blue); /* Professional scientific accent */
   margin-bottom: 0.5rem;
 }
 
@@ -85,23 +100,24 @@
 }
 
 .pillar-card {
-  background: #ffffff; /* Solid white card to stand out cleanly against the light gray background */
+  background: #ffffff; /* Solid white card against the light gray background */
   border: 1px solid #e2e8f0; /* Smooth, light border */
   padding: 2.5rem;
   border-radius: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle depth for light mode layout */
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .pillar-card:hover {
-  border-color: #0284c7;
+  border-color: var(--lab-blue);
+  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08); /* Sophisticated light-mode hover glow */
 }
 
 .icon-svg {
   width: 28px;
   height: 28px;
-  color: #0284c7;
+  color: var(--lab-blue);
 }
 
 .pillar-title {
@@ -111,7 +127,7 @@
 }
 
 .pillar-desc {
-  color: #475569; /* Clean gray for subtext */
+  color: var(--text-muted); /* Clean gray for subtext */
   line-height: 1.6;
   font-size: 0.95rem;
 }
@@ -120,7 +136,15 @@
   .hero-title {
     font-size: 2.5rem;
   }
+  
   .hero-actions {
+    display: flex;
     flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .action-btn-primary {
+    width: 100%;
+    text-align: center;
   }
 }

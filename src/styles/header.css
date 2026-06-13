@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
+/* --- Global Behavior Override for Smooth Section Scrolling --- */
+html {
+  scroll-behavior: smooth;
+}
+
 /* --- 1. Global Shell --- */
 .site-header {
   width: 100%;
@@ -14,7 +19,7 @@
 
 /* --- 2. Top Ecosystem Bar (Clean Scientific Top Bar) --- */
 .top-bar {
-  background-color: #0f172a; /* Deep Slate replacing heavy Plum */
+  background-color: #0f172a; /* Deep Slate standard across all ecosystem sites */
   padding: 8px 24px;
   color: #e2e8f0;
   font-size: 13px;
@@ -41,7 +46,7 @@
   color: #e2e8f0;
   transition: color 0.2s ease;
   font-size: 12px;
-  font-weight: 600; /* Fixed bold layout assignment */
+  font-weight: 600;
 }
 
 .nav-item-link {
@@ -55,7 +60,7 @@
 }
 
 .separator {
-  color: #334155; /* Soft slate separator */
+  color: #334155;
   margin: 0 10px;
   font-size: 16px;
 }
@@ -73,7 +78,7 @@
 }
 
 .social-link:hover {
-  color: #38bdf8; /* Keeps elements perfectly static without breaking structural layout */
+  color: #38bdf8;
 }
 
 .nav-wrapper-item:hover {
@@ -111,19 +116,19 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 700;
-  color: #0f172a; /* Matched to deep slate body text color */
+  color: #0f172a;
   margin: 0;
 }
 
 .brand-tagline {
   font-size: 11px;
-  color: #64748b; /* Soft slate */
+  color: #64748b;
   margin: 0;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
-/* Navigation Links */
+/* Navigation Links - Flattened Layout Model */
 .nav-list {
   display: flex;
   align-items: center;
@@ -137,7 +142,7 @@
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  color: #334155; /* Neutral dark for text legs */
+  color: #334155;
   padding: 8px 4px;
   display: flex;
   align-items: center;
@@ -147,62 +152,7 @@
 
 .nav-link-item:hover,
 .nav-link-item.active {
-  color: #0284c7; /* Scientific blue accent to match body titles */
-}
-
-/* Dropdown Menu */
-.nav-item {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #ffffff;
-  min-width: 220px;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08); /* Clean dark-slate shadow fill */
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  padding: 8px 0;
-  list-style: none;
-  margin-top: 8px;
-  display: none;
-}
-
-.dropdown-menu.show {
-  display: block;
-}
-
-.dropdown-link-item {
-  display: block;
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #475569;
-  text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.dropdown-link-item:hover {
-  background: #f0f9ff; /* Clear, refreshing blue background highlight */
-  color: #0284c7;
-}
-
-/* CTA Sign In Button */
-.nav-signin-btn {
-  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%); /* Clean blue science spectrum */
-  color: #ffffff;
-  padding: 8px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.nav-signin-btn:hover {
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
-  transform: translateY(-1px);
+  color: #0284c7; /* Scientific Deep Blue active focus */
 }
 
 /* Mobile Toggle */
@@ -244,5 +194,6 @@
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
   }
 }

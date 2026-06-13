@@ -1,7 +1,7 @@
-/* src/styles/ourstory.css */
+/* src/styles/about.css */
 
 .story-container {
-  max-width: 800px; /* Constrained reading width for high-end typography layout */
+  max-width: 1200px; /* Expanded layout constraints matching master content grids */
   margin: 0 auto;
   padding: 60px 24px 100px;
   font-family: var(--font-sans);
@@ -9,6 +9,7 @@
 
 .story-hero-section {
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .story-narrative {
@@ -36,7 +37,7 @@
 .story-block p {
   font-size: 16px;
   line-height: 1.8;
-  color: #2d3748; /* Smooth charcoal for readability */
+  color: var(--text-muted); /* Streamlined typography linkage tokens */
 }
 
 /* Elegant callout style for the Mission / Vision focuses */
@@ -48,10 +49,18 @@
 }
 
 .story-card {
-  background-color: #fafafa;
-  border-left: 4px solid var(--brand-violet);
+  background-color: #ffffff;
+  border: 1px solid var(--bg-border);
+  border-left: 4px solid var(--lab-blue); /* Mapped to signature GenAI Lab Blue */
   padding: 24px;
   border-radius: 0 12px 12px 0;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.01);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--lab-blue);
 }
 
 .story-card h3 {
@@ -68,7 +77,7 @@
 .story-card li {
   font-size: 14px;
   line-height: 1.6;
-  color: #4a5568;
+  color: var(--text-muted);
   margin-bottom: 8px;
 }
 

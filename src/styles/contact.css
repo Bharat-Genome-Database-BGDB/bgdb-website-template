@@ -1,7 +1,7 @@
 /* src/styles/contact.css */
 
 .contact-container {
-  max-width: 1000px;
+  max-width: 1200px; /* Expanded limit to align perfectly with your content grids */
   margin: 0 auto;
   padding: 60px 24px 100px;
   font-family: var(--font-sans);
@@ -26,7 +26,7 @@
   border: 1px solid var(--bg-border);
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(26, 5, 48, 0.01);
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.01);
 }
 
 .info-card h3 {
@@ -40,14 +40,14 @@
 }
 
 .info-card h3 i {
-  color: var(--brand-violet);
+  color: var(--lab-blue); /* Updated brand icon vector flag */
   font-size: 16px;
 }
 
 .info-card p, .info-card li {
   font-size: 14px;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--text-muted);
 }
 
 .info-card ul {
@@ -61,7 +61,7 @@
   border: 1px solid var(--bg-border);
   padding: 36px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(26, 5, 48, 0.02);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
 }
 
 .form-group {
@@ -80,22 +80,23 @@
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #cbd5e1;
   border-radius: 8px;
   font-family: var(--font-sans);
   font-size: 14px;
-  color: #111827;
+  color: #0f172a;
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--brand-violet);
+  border-color: var(--lab-blue);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
 }
 
 .form-submit-btn {
-  background: var(--brand-violet);
+  background: var(--lab-blue); /* Clean lab blue submit action */
   color: #ffffff;
   border: none;
   padding: 12px 24px;
@@ -106,13 +107,43 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .form-submit-btn:hover {
-  background: var(--brand-violet-hover);
+  background: var(--lab-blue-hover);
+  transform: translateY(-1px);
 }
 
+/* src/styles/home.css (Add right under .action-btn-primary) */
+
+.action-btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--lab-blue);
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--lab-blue);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.action-btn-secondary:hover {
+  background: #f0f9ff; /* Very soft lab-blue canvas tint */
+  color: var(--lab-blue-hover);
+  border-color: var(--lab-blue-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .action-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;

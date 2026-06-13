@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { researchPillars } from '@data/genai-content';
-import '@styles/home.css'; // Swapped clean stylesheet reference here
+import '@styles/home.css'; 
 
 const ResearchIcon = ({ name, className }) => {
   const icons = {

@@ -1,15 +1,12 @@
 /* src/styles/footer.css */
 
 .site-footer {
-  background-color: #0f172a;
-  /* Deep Slate anchoring bar matching the Header top bar */
-  color: #94a3b8;
-  /* Crisp, clean muted gray for sub-elements and copy */
+  background-color: #0f172a; /* Maintained Deep Slate standard across all ecosystem footers */
+  color: #94a3b8; /* Crisp, clean muted gray for sub-elements and copy */
   padding: 60px 24px 40px;
   font-family: 'Inter', sans-serif;
   width: 100%;
-  border-top: 1px solid #e2e8f0;
-  /* Clear boundary definition divider */
+  border-top: 1px solid #e2e8f0; /* Clear boundary definition divider */
 }
 
 .footer-inner {
@@ -37,8 +34,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 700;
-  color: #ffffff;
-  /* Bright White Accent for strong corporate branding */
+  color: #ffffff; /* Bright White Accent for strong corporate branding */
   margin: 0;
 }
 
@@ -46,14 +42,12 @@
   font-style: normal;
   font-size: 14px;
   line-height: 1.6;
-  color: #cbd5e1;
-  /* Clear white-toned slate for excellent text contrast */
+  color: #cbd5e1; /* Clear white-toned slate for excellent text contrast */
 }
 
 .footer-copyright {
   font-size: 12px;
-  color: #64748b;
-  /* Soft footer sub-text gray */
+  color: #64748b; /* Soft footer sub-text gray */
   margin-top: 8px;
 }
 
@@ -68,16 +62,14 @@
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #38bdf8;
-  /* Sharp, vibrant light tech blue for group subtitles */
+  color: #38bdf8; /* Sharp, vibrant light tech blue for group subtitles */
   margin: 0 0 4px 0;
   letter-spacing: 0.12em;
 }
 
 .footer-links a {
   display: block;
-  color: #94a3b8;
-  /* Matching calm slate layout standard links */
+  color: #94a3b8; /* Matching calm slate layout standard links */
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
@@ -85,15 +77,12 @@
 }
 
 .footer-links a:hover {
-  color: #38bdf8;
-  /* Clean blue glow transitions on cursor hover */
-  transform: translateX(2px);
-  /* Subtle glide link transition */
+  color: #0284c7; /* Scientific Deep Blue glow transition on link hover */
+  transform: translateX(2px); /* Subtle glide link transition */
 }
 
 /* Responsive breakdowns for mobile views */
 @media (max-width: 768px) {
-
   .footer-inner,
   .footer-inner:has(.member-gate-links) {
     grid-template-columns: 1fr;
@@ -101,8 +90,7 @@
   }
 
   .footer-brand {
-    border-bottom: 1px solid #334155;
-    /* Subtle dark slate line separating rows on mobile */
+    border-bottom: 1px solid #334155; /* Subtle dark slate line separating rows on mobile */
     padding-bottom: 24px;
   }
 }
@@ -125,12 +113,14 @@
   font-size: 13px;
   line-height: 1.6;
   margin: 0;
+  color: #64748b;
 }
 
 .footer-copyright-statement a {
-  color: #38bdf8; 
+  color: #38bdf8; /* Tech blue accent link specifically for portal connections */
   text-decoration: none;
   transition: color 0.15s ease;
+  font-weight: 500;
 }
 
 .footer-copyright-statement a:hover {

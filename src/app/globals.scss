@@ -6,24 +6,24 @@
    ========================================================================== */
 :root {
   /* Brand Typography Stack */
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Color System Core Variables */
-  --brand-plum:     #1a0530; /* Primary background accent (Footer / Top Bar) */
-  --brand-plum-mid: #2e1065; /* Mid tone accent */
-  --brand-violet:   #7c3aed; /* Interactive elements, links, CTAs */
-  --brand-violet-hover: #4a1d96; /* Hover states overlay */
-  --brand-lilac:    #a78bfa; /* Structural header labels & borders */
+  /* Color System Core Variables - Mapped Strictly to GenAI Lab Blue Theme */
+  --brand-plum:     #0f172a; /* Deep Slate background accent (Footer / Top Bar) */
+  --brand-plum-mid: #1e293b; /* Mid tone computational slate */
+  --brand-violet:   #0284c7; /* Interactive elements, links, CTAs (Lab Blue) */
+  --brand-violet-hover: #0369a1; /* Hover states overlay (Deep Lab Blue) */
+  --brand-lilac:    #38bdf8; /* Structural header labels & borders (Tech Cyan) */
   
   /* Text Printing Ink Variables */
-  --ink-primary:    #1e0535; /* Heavy body print and title colors */
-  --ink-secondary:  #4b5563; /* Subtle text layers and taglines */
-  --ink-muted:      rgba(196, 181, 253, 0.65); /* Lilac fallback text contrast */
+  --ink-primary:    #0f172a; /* Heavy slate body print and title colors */
+  --ink-secondary:  #475569; /* Subtle slate text layers and taglines */
+  --ink-muted:      #94a3b8; /* Falling border contrast lines */
   
   /* Page Canvas Background Defaults */
-  --bg-canvas:      #ffffff;
-  --bg-border:      #f3f4f6;
+  --bg-canvas:      #f8fafc; /* Crisp light off-white canvas background */
+  --bg-border:      #e2e8f0;
 }
 
 /* ==========================================================================
@@ -35,12 +35,16 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth; /* Glides beautifully between bento blocks */
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-canvas);
   font-family: var(--font-sans);
-  color: var(--ink-primary);
+  color: var(--ink-secondary);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -62,12 +66,12 @@ body {
   margin-bottom: 40px;
 
   .hero-main-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans); /* Swapped to clean modern sans for computing focus */
     font-size: 42px;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--ink-primary);
     margin: 0 0 8px 0;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hero-sub-tagline {
@@ -96,7 +100,7 @@ body {
   .mission-paragraph {
     font-size: 16px;
     line-height: 1.65;
-    color: #111827;
+    color: var(--ink-secondary);
     margin: 0;
     max-width: 850px;
 
@@ -111,10 +115,10 @@ body {
     font-size: 16px;
     font-style: italic;
     line-height: 1.6;
-    color: #374151;
+    color: var(--ink-secondary);
     margin: 12px 0;
     padding-left: 20px;
-    border-left: 3px solid var(--brand-violet);
+    border-left: 3px solid var(--brand-violet); /* Now clean tech blue */
   }
 }
 
@@ -139,14 +143,15 @@ body {
 
   .ribbon-hyperlink {
     color: var(--brand-violet);
-    text-decoration: underline;
-    font-weight: 500;
+    text-decoration: none;
+    font-weight: 600;
     transition: color 0.15s ease;
     display: flex;
     align-items: center;
 
     &:hover {
       color: var(--brand-violet-hover);
+      text-decoration: underline;
     }
   }
 
@@ -154,7 +159,7 @@ body {
     display: inline-block;
     width: 1px;
     height: 14px;
-    background-color: #cbd5e1;
+    background-color: var(--bg-border);
     margin: 0 10px;
   }
 }
