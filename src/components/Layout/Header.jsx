@@ -14,29 +14,18 @@ import "@styles/header.css";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  
+
   const pathname = usePathname();
   const menuRef = useRef();
 
   // --- GenAI Lab Navigation Configuration ---
   const navLinks = [
     { label: "Home", to: "/" },
-    { 
-      label: "About Labs", 
-      to: "#",
-      dropdown: [
-        { label: "Our Story", to: "/about/ourstory" }
-      ]
-    },
-    {
-      label: "Research",
-      to: "#",
-      dropdown: [
-        { label: "Models & Initiatives", to: "/projects/initiatives" },
-        { label: "Publications", to: "/projects/publications" }
-      ]
-    },
-    { label: "Contact Us", to: "/contact" },
+    { label: "About Labs", to: "/#about" },       
+    { label: "Our Research", to: "/#research" }, 
+    { label: "FAQ", to: "/faq" },                
+    { label: "Contact Us", to: "/contact" }, 
+    { label: "Privacy Policy", to: "/privacy" },      
   ];
 
   // Standard global ecosystem mapping preserved intact
