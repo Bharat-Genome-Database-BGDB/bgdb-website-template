@@ -21,11 +21,11 @@ const Header = () => {
   // --- GenAI Lab Navigation Configuration ---
   const navLinks = [
     { label: "Home", to: "/" },
-    { label: "About Labs", to: "/about" },       
-    { label: "Our Research", to: "/#research" }, 
-    { label: "FAQ", to: "/faq" },                
-    { label: "Contact Us", to: "/contact" }, 
-    { label: "Privacy Policy", to: "/privacy" },      
+    { label: "About Labs", to: "/about" },
+    { label: "Our Research", to: "/#research" },
+    { label: "FAQ", to: "/faq" },
+    { label: "Contact Us", to: "/contact" },
+    { label: "Privacy Policy", to: "/privacy" },
   ];
 
   // Standard global ecosystem mapping preserved intact
@@ -59,13 +59,16 @@ const Header = () => {
             </nav>
           </div>
           <div className="top-bar-socials">
+            <a href="https://www.linkedin.com/company/sivasakthi-science-foundation" target="_blank" rel="noopener noreferrer" className="social-link">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
             <a href="https://x.com/SSF_handle" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="https://www.youtube.com/sivasakthifoundation" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.youtube.com/@SivasakthiScienceFoundation" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fab fa-youtube"></i>
             </a>
-            <a href="https://www.instagram.com/ssf.iinsta" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.instagram.com/sivasakthiscience/" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fab fa-instagram"></i>
             </a>
           </div>

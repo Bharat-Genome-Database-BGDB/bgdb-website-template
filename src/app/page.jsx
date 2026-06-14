@@ -44,7 +44,7 @@ export default function GenAIHomePage() {
                 </div>
                 <h4 className="pillar-title">{pillar.title}</h4>
                 <p className="pillar-desc">{pillar.description}</p>
-                <Link href={`/research#${pillar.id}`} className="pillar-link">View Projects →</Link>
+                {/* <Link href={`/research#${pillar.id}`} className="pillar-link">View Projects →</Link> */}
               </div>
             ))}
           </div>
