@@ -14,15 +14,15 @@ import "@styles/header.css";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  
+
   const pathname = usePathname();
   const menuRef = useRef();
 
   // --- Master Navigation Configuration ---
   const navLinks = [
     { label: "Home", to: "/" },
-    { 
-      label: "About Us", 
+    {
+      label: "About Us",
       to: "#",
       dropdown: [
         { label: "Our Story", to: "/about/ourstory" },
@@ -68,13 +68,16 @@ const Header = () => {
             </nav>
           </div>
           <div className="top-bar-socials">
+            <a href="https://www.linkedin.com/company/sivasakthi-science-foundation" target="_blank" rel="noopener noreferrer" className="social-link">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
             <a href="https://x.com/SSF_handle" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="https://www.youtube.com/sivasakthifoundation" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.youtube.com/@SivasakthiScienceFoundation" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fab fa-youtube"></i>
             </a>
-            <a href="https://www.instagram.com/ssf.iinsta" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.instagram.com/sivasakthiscience/" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fab fa-instagram"></i>
             </a>
           </div>
